@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: generador-pptx-compiler
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: frankfurt
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
